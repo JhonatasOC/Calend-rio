@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicionando Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      /* Adicione seu CSS aqui ou faça referência a um arquivo CSS externo */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="calendar">
+                <div class="month">
+                    <i class="fas fa-angle-left prev"></i>
+                    <div class="date">dezembro 2015</div>
+                    <i class="fas fa-angle-right next"></i>
+                </div>
+                <div class="weekdays">
+                    <div>Dom</div>
+                    <div>Seg</div>
+                    <div>Ter</div>
+                    <div>Qua</div>
+                    <div>Qui</div>
+                    <div>Sex</div>
+                    <div>Sáb</div>
+                </div>
+                <div class="days"></div>
+                <div class="goto-today">
+                    <div class="goto">
+                        <input type="text" placeholder="mm/aaaa" class="date-input" />
+                        <button class="goto-btn">Ir</button>
+                    </div>
+                    <button class="today-btn">Hoje</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="today-date">
+                <div class="event-day"></div>
+                <div class="event-date"></div>
+            </div>
+            <div class="events"></div>
+            <div class="add-event-wrapper">
+                <div class="add-event-header">
+                    <div class="title">Adicionar Evento</div>
+                    <i class="fas fa-times close"></i>
+                </div>
+                <div class="add-event-body">
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Nome do Evento" class="event-name" />
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Hora do Evento De" class="event-time-from" />
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Hora do Evento Até" class="event-time-to" />
+                    </div>
+                </div>
+                <div class="add-event-footer">
+                    <button class="add-event-btn">Adicionar Evento</button>
+                    <div class="feedback-btn-wrapper">
+                        <button class="feedback-btn">Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="add-event">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <div class="feedback-wrapper" id="feedbackWrapper" style="display:none;">
+        <div class="feedback-form">
+            <span class="close-feedback" id="closeFeedback">&times;</span>
+            <h3>Feedback</h3>
+            <form id="feedbackForm">
+                <label for="feedbackName">Nome:</label>
+                <input type="text" id="feedbackName" name="feedbackName" required>
+        
+                <label for="feedbackEmail">Email:</label>
+                <input type="email" id="feedbackEmail" name="feedbackEmail" required>
+        
+                <label for="feedbackMessage">Mensagem:</label>
+                <textarea id="feedbackMessage" name="feedbackMessage" rows="4" required></textarea>
+        
+                <button type="submit" class="submit-feedback">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
